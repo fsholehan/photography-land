@@ -787,6 +787,15 @@ video {
   flex-grow: 1;
 }
 
+.snap-x{
+  -ms-scroll-snap-type: x var(--tw-scroll-snap-strictness);
+      scroll-snap-type: x var(--tw-scroll-snap-strictness);
+}
+
+.snap-center{
+  scroll-snap-align: center;
+}
+
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
