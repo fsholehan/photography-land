@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/styles.css" />
+    <title>Photography</title>
+  </head>
+  <body class="bg-primar-100 pb-10">
+    <!-- header -->
+    <header class="px-6 py-3 font-sans-pro md:px-0 md:py-5">
+      <div class="container mx-auto">
+        <div
+          x-data="{ open: false }"
+          class="flex flex-col md:flex-row md:items-center md:justify-between"
+        >
+          <div
+            class="flex flex-grow flex-col justify-between md:flex-row md:items-center md:space-x-20"
+          >
+            <div class="flex items-center justify-between">
+              <a class="font-staatliches text-4xl" href="#"> PHY </a>
+              <button
+                @click="open = !open"
+                class="bg-black px-2 py-2 text-white focus:outline-none md:hidden"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-gray-10 h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    x-show="!open"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+
+                  <path
+                    x-show="open"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <ul
+              :class="{'flex': open, 'hidden': !open}"
+              class="mt-5 flex-col space-y-4 md:mt-0 md:flex md:flex-row md:items-center md:space-x-10 md:space-y-0"
+            >
+              <li class="nav-link">About</li>
+              <li class="nav-link">Service</li>
+              <li class="nav-link">Blog</li>
+              <li class="nav-link">Pricing</li>
+              <li>
+                <a
+                  class="mt-4 inline-block bg-black px-10 py-3 font-staatliches text-white md:ml-5 md:mt-0"
+                  href="#"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <!-- hero -->
+    <section class="relative py-5">
+      <!-- image -->
+      <img
+        class="absolute top-12 h-[680px] w-[680px] object-cover md:right-[21rem] md:top-28"
+        src="public/images/big-circle.svg"
+        alt=""
+      />
+      <img
+        src="public/images/man.svg"
+        class="absolute top-[450px] z-10 h-[552px] w-[392px] md:right-[28rem] md:top-48 md:h-[690px] md:w-[411px]"
+        alt=""
+      />
+      <!-- end image -->
+      <div class="container mx-auto">
+        <h1 class="relative text-center font-staatliches text-7xl md:text-9xl">
+          capturing <br />
+          beauty photo
+        </h1>
+        <div
+          class="relative mt-24 flex flex-col items-center justify-between space-y-80 px-6 md:flex-row md:space-y-0 md:px-0"
+        >
+          <div>
+            <h1 class="font-sans-pro text-2xl font-bold">Photography</h1>
+            <p class="mt-2 w-[270px] font-sans-pro">
+              Even the all-powerful Pointing has no control about the blind
+              texts it is an almost unorthographic life.
+            </p>
+            <a
+              class="mt-10 inline-block border border-gray-400 bg-transparent px-10 py-2 font-staatliches text-black"
+              href="#"
+              >Contact</a
+            >
+          </div>
+          <div class="ml-44 md:ml-0">
+            <div class="relative z-10">
+              <img
+                class="h-[170px] w-[170px]"
+                src="public/images/Oval.svg "
+                alt=""
+              />
+              <img
+                src="public/images/Bitmap.svg"
+                alt=""
+                class="absolute top-10 left-6"
+              />
+            </div>
+            <h2 class="relative z-10 font-sans-pro text-2xl font-bold">
+              My Camera
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end hero -->
+
+    <!-- section info -->
+    <section class="px-3 md:px-0">
+      <div
+        class="container relative mx-auto mt-[23px] flex flex-col items-start space-y-16 border-4 border-gray-900 px-8 py-20 md:mt-64 md:flex-row md:space-y-0 md:space-x-16 md:py-36"
+      >
+        <div class="md:w-1/2">
+          <h1 class="font-staatliches text-6xl">
+            Service we <br />
+            Provide
+          </h1>
+          <p class="mt-8 w-[273px] font-sans-pro md:w-[370px]">
+            Marks and devious Semikoli, but the Little Blind Text didn’t listen.
+            She packed her seven versalia, put her initial into the belt and
+            made herself on the way.
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 gap-x-0 gap-y-10 pb-24 md:grid-cols-2 md:gap-x-3 md:pb-0"
+        >
+          <div class="flex flex-col space-y-5">
+            <div
+              class="flex h-24 w-24 items-center justify-center rounded-full bg-black"
+            >
+              <img src="public/images/camera.svg" alt="" />
+            </div>
+            <h1 class="font-sans-pro text-2xl font-bold">Wedding</h1>
+            <p class="font-sans-pro text-black/50">
+              When she reached the first hills of the Italic Mountains.
+            </p>
+          </div>
+          <div class="flex flex-col space-y-5">
+            <div
+              class="flex h-24 w-24 items-center justify-center rounded-full bg-black"
+            >
+              <img src="public/images/circle.svg" alt="" />
+            </div>
+            <h1 class="font-sans-pro text-2xl font-bold">Travel</h1>
+            <p class="font-sans-pro text-black/50">
+              She reached the first hills of the Italic Mountains, she had.
+            </p>
+          </div>
+          <div class="flex flex-col space-y-5">
+            <div
+              class="flex h-24 w-24 items-center justify-center rounded-full bg-black"
+            >
+              <img src="public/images/photo.svg" alt="" />
+            </div>
+            <h1 class="font-sans-pro text-2xl font-bold">Wild Photo</h1>
+            <p class="font-sans-pro text-black/50">
+              Reached the first hills of the Italic Mountains, she had a last.
+            </p>
+          </div>
+          <div class="flex flex-col space-y-5">
+            <div
+              class="flex h-24 w-24 items-center justify-center rounded-full bg-black"
+            >
+              <img src="public/images/man-photo.svg" alt="" />
+            </div>
+            <h1 class="font-sans-pro text-2xl font-bold">Lyfestyle</h1>
+            <p class="font-sans-pro text-black/50">
+              First hills of the Italic Mountains, she had a last view back.
+            </p>
+          </div>
+        </div>
+        <img
+          class="absolute left-0 bottom-0 md:-left-16"
+          src="public/images/mountain.svg"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <!-- end section info -->
+
+    <!-- alpineJs -->
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.7.1/dist/cdn.min.js"
+    ></script>
+  </body>
+</html>
